@@ -5,7 +5,7 @@ node {
 	stage('Performance Test'){
 		parallel(
 			BlazeMeterTest: {
-				bat 'bzt smoketest.yml -report'
+				sh 'bzt smoketest.yml -report'
 			}
 		)
 	}
