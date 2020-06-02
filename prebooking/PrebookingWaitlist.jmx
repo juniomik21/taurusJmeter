@@ -63,6 +63,69 @@
       <stringProp name="TestPlan.user_define_classpath"></stringProp>
     </TestPlan>
     <hashTree>
+      <BackendListener guiclass="BackendListenerGui" testclass="BackendListener" testname="Backend Listener" enabled="true">
+        <elementProp name="arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
+          <collectionProp name="Arguments.arguments">
+            <elementProp name="dapt.influxdb.database" elementType="Argument">
+              <stringProp name="Argument.name">dapt.influxdb.database</stringProp>
+              <stringProp name="Argument.value">jmeter</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="dapt.backendlistener.proyect" elementType="Argument">
+              <stringProp name="Argument.name">dapt.backendlistener.proyect</stringProp>
+              <stringProp name="Argument.value">Pipeline</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="dapt.backendlistener.scene" elementType="Argument">
+              <stringProp name="Argument.name">dapt.backendlistener.scene</stringProp>
+              <stringProp name="Argument.value">Pipeline01</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="dapt.backendlistener.testcase" elementType="Argument">
+              <stringProp name="Argument.name">dapt.backendlistener.testcase</stringProp>
+              <stringProp name="Argument.value">testcaseTest</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="dapt.backendlistener.typeLoadTest" elementType="Argument">
+              <stringProp name="Argument.name">dapt.backendlistener.typeLoadTest</stringProp>
+              <stringProp name="Argument.value">test</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="dapt.backendlistener.environment" elementType="Argument">
+              <stringProp name="Argument.name">dapt.backendlistener.environment</stringProp>
+              <stringProp name="Argument.value">env</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="dapt.influxdb.host" elementType="Argument">
+              <stringProp name="Argument.name">dapt.influxdb.host</stringProp>
+              <stringProp name="Argument.value">34.78.139.115</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="dapt.influxdb.port" elementType="Argument">
+              <stringProp name="Argument.name">dapt.influxdb.port</stringProp>
+              <stringProp name="Argument.value">8086</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="dapt.influxdb.user" elementType="Argument">
+              <stringProp name="Argument.name">dapt.influxdb.user</stringProp>
+              <stringProp name="Argument.value">admin</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="dapt.influxdb.pwd" elementType="Argument">
+              <stringProp name="Argument.name">dapt.influxdb.pwd</stringProp>
+              <stringProp name="Argument.value">admin</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+            <elementProp name="dapt.backendlistener.useSimulationRavis" elementType="Argument">
+              <stringProp name="Argument.name">dapt.backendlistener.useSimulationRavis</stringProp>
+              <stringProp name="Argument.value">false</stringProp>
+              <stringProp name="Argument.metadata">=</stringProp>
+            </elementProp>
+          </collectionProp>
+        </elementProp>
+        <stringProp name="classname">dapt.jmeter.JMeterInfluxDBBackendListenerClientRavisDAPTv2</stringProp>
+      </BackendListener>
+      <hashTree/>
       <Arguments guiclass="ArgumentsPanel" testclass="Arguments" testname="Set variables" enabled="true">
         <collectionProp name="Arguments.arguments">
           <elementProp name="BASE_URL_PREBOOKING" elementType="Argument">
@@ -410,7 +473,7 @@
             <hashTree/>
           </hashTree>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="2. Cupra ID registration/login (Flow steps 5-6)" enabled="true">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="2. Cupra ID registration/login (Flow steps 5-6)" enabled="false">
           <boolProp name="TransactionController.includeTimers">false</boolProp>
           <boolProp name="TransactionController.parent">true</boolProp>
         </TransactionController>
@@ -2303,7 +2366,7 @@ vars.put(&quot;userCounter&quot;, String.valueOf(user));</stringProp>
             </hashTree>
           </hashTree>
         </hashTree>
-        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="3. Pre-Book (Flow steps 7-9)" enabled="true">
+        <TransactionController guiclass="TransactionControllerGui" testclass="TransactionController" testname="3. Pre-Book (Flow steps 7-9)" enabled="false">
           <boolProp name="TransactionController.includeTimers">false</boolProp>
           <boolProp name="TransactionController.parent">true</boolProp>
         </TransactionController>
@@ -3084,69 +3147,6 @@ log.info(new String(decoded_response));</stringProp>
             <hashTree/>
           </hashTree>
         </hashTree>
-        <BackendListener guiclass="BackendListenerGui" testclass="BackendListener" testname="Backend Listener" enabled="true">
-          <elementProp name="arguments" elementType="Arguments" guiclass="ArgumentsPanel" testclass="Arguments" enabled="true">
-            <collectionProp name="Arguments.arguments">
-              <elementProp name="dapt.influxdb.database" elementType="Argument">
-                <stringProp name="Argument.name">dapt.influxdb.database</stringProp>
-                <stringProp name="Argument.value">jmeter</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-              <elementProp name="dapt.backendlistener.proyect" elementType="Argument">
-                <stringProp name="Argument.name">dapt.backendlistener.proyect</stringProp>
-                <stringProp name="Argument.value">Pipeline</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-              <elementProp name="dapt.backendlistener.scene" elementType="Argument">
-                <stringProp name="Argument.name">dapt.backendlistener.scene</stringProp>
-                <stringProp name="Argument.value">Pipeline01</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-              <elementProp name="dapt.backendlistener.testcase" elementType="Argument">
-                <stringProp name="Argument.name">dapt.backendlistener.testcase</stringProp>
-                <stringProp name="Argument.value">testcaseTest</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-              <elementProp name="dapt.backendlistener.typeLoadTest" elementType="Argument">
-                <stringProp name="Argument.name">dapt.backendlistener.typeLoadTest</stringProp>
-                <stringProp name="Argument.value">test</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-              <elementProp name="dapt.backendlistener.environment" elementType="Argument">
-                <stringProp name="Argument.name">dapt.backendlistener.environment</stringProp>
-                <stringProp name="Argument.value">env</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-              <elementProp name="dapt.influxdb.host" elementType="Argument">
-                <stringProp name="Argument.name">dapt.influxdb.host</stringProp>
-                <stringProp name="Argument.value">34.78.139.115</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-              <elementProp name="dapt.influxdb.port" elementType="Argument">
-                <stringProp name="Argument.name">dapt.influxdb.port</stringProp>
-                <stringProp name="Argument.value">8086</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-              <elementProp name="dapt.influxdb.user" elementType="Argument">
-                <stringProp name="Argument.name">dapt.influxdb.user</stringProp>
-                <stringProp name="Argument.value">admin</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-              <elementProp name="dapt.influxdb.pwd" elementType="Argument">
-                <stringProp name="Argument.name">dapt.influxdb.pwd</stringProp>
-                <stringProp name="Argument.value">admin</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-              <elementProp name="dapt.backendlistener.useSimulationRavis" elementType="Argument">
-                <stringProp name="Argument.name">dapt.backendlistener.useSimulationRavis</stringProp>
-                <stringProp name="Argument.value">false</stringProp>
-                <stringProp name="Argument.metadata">=</stringProp>
-              </elementProp>
-            </collectionProp>
-          </elementProp>
-          <stringProp name="classname">dapt.jmeter.JMeterInfluxDBBackendListenerClientRavisDAPTv2</stringProp>
-        </BackendListener>
-        <hashTree/>
       </hashTree>
     </hashTree>
   </hashTree>
