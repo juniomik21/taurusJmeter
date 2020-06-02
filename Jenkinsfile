@@ -3,13 +3,8 @@ node {
       // Run the Taurus build
    }
    stage('Performance Tests') {
-    parallel(
-        BlazeMeterTest: {
-         bat './Users/megearod/AppData/Local/Taurus/bin/bzt.exe C:/Utils/Rendimiento/PruebasJmx/smoketest.yml'
-        },
-        Analysis: {
-            sleep 60
-        })
+           bat 'C:/Users/megearod/AppData/Local/Taurus/bin/bzt.exe C:/Utils/Rendimiento/PruebasJmx/smoketest.yml'
+        
    }
 
    stage('Deploy') {
