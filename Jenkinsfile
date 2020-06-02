@@ -5,9 +5,7 @@ node {
    stage('Performance Tests') {
     parallel(
         BlazeMeterTest: {
-            dir ('C:\Users\megearod\.bzt') {
-               bat 'bzt smoketest.yml -report'
-            }
+         bat '.\Users\megearod\AppData\Local\Taurus\bin\bzt.exe C:\Utils\Rendimiento\PruebasJmx\smoketest.yml'
         },
         Analysis: {
             sleep 60
